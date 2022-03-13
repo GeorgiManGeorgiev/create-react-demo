@@ -1,30 +1,26 @@
 import React from 'react';
+import Heading from './components/HeadingFuncComp';
+import Body from './components/Body';
+import BookList from './components/BookList';
+import Counter from './components/Counter';
 
-import logo from './logo.svg';
 import './App.css';
+
+const booksData = [
+  { title: 'Harry Poter', description: 'Wizards and Stuff' },
+  { title: 'Programming with Js', description: 'Guide to programing' },
+  { title: 'The Bible', description: 'Most important book' },
+];
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
+    <div className="site-wrapper">
+      <Heading text="Our custom library from props"> Our custom library from children</Heading>
 
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit
-          {' '}
-          <code>src/App.js</code>
-          {' '}
-          and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Counter />
+      <BookList books={booksData} />
+      <Body />
+
     </div>
   );
 }

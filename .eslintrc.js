@@ -33,6 +33,8 @@ module.exports = {
     indent: [2, 2, { SwitchCase: 1 }],
     'no-console': 0,
     'no-alert': 0,
-    'linebreak-style': 0
+    'linebreak-style': 0,
+    'react/prefer-stateless-function': [0, { ignorePureComponents: true }],
+    'react/prop-types': [1, { }],
   },
 };
