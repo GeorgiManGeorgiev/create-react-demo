@@ -18,7 +18,7 @@ class BookList extends Component {
       <div className="book-list">
 
         <h2>Our book collection</h2>
-        {books.map((x) => <Book title={x.title} description={x.description} />)}
+        {books.map((x) => <Book title={x.title} description={x.description} isSelected />)}
 
       </div>
     );
